@@ -1,10 +1,10 @@
 import json
-import numpy as np
+import random
 
 def get_nombres():
     with open('nombres.json', 'r') as fn:
         names = json.load(fn)
 
-    return np.random.choice(names, 30)
+    return random.choices(names, k=30)
 
     
